@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RingTune</title> 
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://use.fontawesome.com/a46f002d02.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <img src="res/background.png" id="backgroundLogo">
+    <img src="res/loading.png" id="loadingLogo">
+    <div id="optionsBox">
+      <img class="option" data-value="I" src="res/icons/I.png">
+    </div>
+    <div id="usedNotes"></div>
+    <div id="settingsBox">
+      <i id="playButton" class="fa fa-play-circle" title="Looping play"></i>
+      <i id="stopButton" class="fa fa-stop-circle" title="Stop playing"></i>
+      <i id="closeButton" class="fa fa-times-circle" title="Delete RingTune"></i>
+      <i id="randomButton" class="fa fa-random" title="Randomized sequence (10)"></i>
+      <i id="melodyButton" class="fa fa-stack" title="Toggle melody">
+        <i class="fa fa-stack-1x fa-music"></i>
+        <i class="fa fa-lg fa-ban"></i>
+      </i>
+      <div id="tempo" title="Change the tempo">
+        <span id="tempoValue">30</span>bpm<br>
+        <input type="range" id="tempoRange" value="30" max="300" min="10" step="1">
+      </div>
+      <div>
+        <i id="infoButton" class="fa fa-info-circle" title="Info and attributions"></i>
+        <i id="exportButton" class="fa fa-share" title="Share this Ringtune"></i>
+      </div>
+    </div>
+  </body>
+</html>

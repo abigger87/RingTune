@@ -1,0 +1,150 @@
+::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+img#backgroundLogo {
+  position: absolute;
+  z-index: -1;
+}
+img#loadingLogo {
+  position: absolute;
+  z-index: 1000;
+}
+div#settingsBox {
+  height: 100%;
+  width: 200px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+div#optionsBox {
+  width: calc(100% - 400px);
+  float: left;
+}
+div#usedNotes {
+  height: 100%;
+  width: calc(100% - 400px);
+  float: left;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@keyframes fade {
+  from { background-color: rgba(255,255,255,0.2); }
+  to   { background-color: transparent; }
+}
+div#usedNotes > div {
+  padding: 10px;
+  border-radius: 5px;
+}
+div#usedNotes > div.active {
+  animation: fade 1 1s;
+}
+img.usedNote {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+img.deleteButton {
+  opacity: 0;
+  position: absolute;
+  left: calc(50% - 150px);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+img.deleteButton:hover {
+  opacity: 1;
+}
+div#optionsBox {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img.option {
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+img.option:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+div#settingsBox > * {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  font-size: 75px;
+  line-height: 75px;
+  text-align: center;
+  margin: 0;
+  color: #e9e9e9;
+  border-radius: 5px;
+  padding: 10px;
+}
+div#settingsBox > *:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+i#playButton.active {
+  background-color: rgba(100,255,100,0.1);
+}
+i#melodyButton > .fa-ban {
+  color: #e74c3c;
+  position: relative;
+  z-index: 2;
+}
+i#melodyButton > .fa-ban.noBan {
+  display: none;
+}
+div#settingsBox > div:last-child, i#infoButton, i#exportButton {
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  line-height: 20px;
+}
+div#tempo {
+  font-size: 20px;
+  font-family: verdana;
+  line-height: initial;
+  height: initial;
+  text-align: center;
+}
+div#tempo > input {
+  width: 100%;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #e9e9e9;
+  border: none;
+  border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #aaaaaa;
+  margin-top: -5px;
+  cursor: pointer;
+}
